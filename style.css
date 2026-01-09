@@ -200,3 +200,35 @@ img {
     margin-bottom: 8px;
 }
 
+/* ===============================
+   NAVIGATION FIX
+   =============================== */
+
+nav {
+    background-color: #388e3c;
+    padding: 12px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* ensures nav stays visible */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    margin-bottom: 0;
+}
+
+nav {
+    margin-top: 0;
+}
+
