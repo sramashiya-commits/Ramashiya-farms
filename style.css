@@ -95,3 +95,13 @@ img {
     cursor: pointer;
     font-size: 16px;
 }
+
+.section ul {
+    list-style-type: disc;
+    margin-top: 10px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
