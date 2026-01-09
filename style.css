@@ -1,3 +1,76 @@
+/* HEADER STYLING */
+header {
+    padding: 10px 30px;
+    background: white; /* Optional: adds contrast against gradient */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* LOGO - Top Left (Reduced Size) */
+.logo-container {
+    flex: 0 0 auto; /* Don't grow or shrink */
+}
+
+.logo-container img {
+    width: 120px; /* Reduced size - adjust as needed */
+    height: auto;
+    max-width: none; /* Overrides the general img rule for logo only */
+    border-radius: 5px; /* Optional: smaller radius for logo */
+}
+
+/* HEADER TEXT - Top Right */
+.header-text {
+    flex: 1; /* Takes remaining space */
+    text-align: right; /* Aligns text to the right */
+    padding-left: 20px; /* Space between logo and text */
+}
+
+.header-text h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.8rem; /* Adjust as needed */
+    color: #2e7d32; /* Green to match your theme */
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* NAVIGATION - Optional styling if you want it aligned too */
+nav {
+    background-color: #2e7d32; /* Green background */
+    padding: 10px 30px;
+    text-align: right; /* Aligns nav links to the right */
+    margin-top: 10px; /* Space below header */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Space between links */
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container spacing */
+.container {
+    padding: 20px 30px;
+}
+
 /* Add this at the top of your style.css file */
 body {
     background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
