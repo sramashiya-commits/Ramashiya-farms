@@ -1,72 +1,85 @@
-/* HEADER STYLING */
+/* HEADER STYLING - Fixed Green Banner */
 header {
     padding: 10px 30px;
-    background: white; /* Optional: adds contrast against gradient */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    background-color: #2e7d32; /* Solid green */
+    color: white; /* White text for all header content */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Makes it stay at top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    width: 100%;
+    box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    flex-wrap: wrap;
 }
 
-/* LOGO - Top Left (Reduced Size) */
-.logo-container {
-    flex: 0 0 auto; /* Don't grow or shrink */
-}
-
+/* Logo styling for green background */
 .logo-container img {
-    width: 120px; /* Reduced size - adjust as needed */
+    width: 120px;
     height: auto;
-    max-width: none; /* Overrides the general img rule for logo only */
-    border-radius: 5px; /* Optional: smaller radius for logo */
+    max-width: none;
+    border-radius: 5px;
+    /* Optional: Add white border to make logo stand out on green */
+    border: 2px solid white;
+    padding: 2px;
+    background-color: white; /* White background behind logo */
 }
 
-/* HEADER TEXT - Top Right */
+/* Header text - white on green */
 .header-text {
-    flex: 1; /* Takes remaining space */
-    text-align: right; /* Aligns text to the right */
-    padding-left: 20px; /* Space between logo and text */
+    flex: 1;
+    text-align: right;
+    padding-left: 20px;
 }
 
 .header-text h1 {
     margin: 0 0 5px 0;
-    font-size: 1.8rem; /* Adjust as needed */
-    color: #2e7d32; /* Green to match your theme */
+    font-size: 1.8rem;
+    color: white; /* White text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .header-text p {
     margin: 0;
     font-size: 1rem;
-    color: #666;
+    color: white; /* White text */
     font-weight: 500;
+    opacity: 0.9; /* Slightly lighter for contrast */
 }
 
-/* NAVIGATION - Optional styling if you want it aligned too */
+/* NAVIGATION - Part of the fixed header */
 nav {
-    background-color: #2e7d32; /* Green background */
-    padding: 10px 30px;
-    text-align: right; /* Aligns nav links to the right */
-    margin-top: 10px; /* Space below header */
+    background-color: transparent; /* Now part of green header */
+    padding: 10px 0 0 0; /* Reduced padding since header has padding */
+    text-align: right;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px; /* Space between links */
+    margin-left: 20px;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 3px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    border: 1px solid transparent;
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Container spacing */
+/* Container spacing - UPDATED for fixed header */
 .container {
     padding: 20px 30px;
 }
