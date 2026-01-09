@@ -232,3 +232,7 @@ nav {
     margin-top: 0;
 }
 
+nav {
+    display: block !important;
+    background: red !important;
+}
