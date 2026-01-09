@@ -1,3 +1,11 @@
+/* Add this at the top of your style.css file */
+body {
+    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
+    min-height: 100vh; /* Ensures gradient covers full page height */
+    margin: 0;
+    padding: 0;
+}
+
 /* Additional styles for Ramashiya Farms */
 img {
     max-width: 100%;
