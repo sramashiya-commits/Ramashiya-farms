@@ -7,7 +7,7 @@ body {
     padding-top: 220px;
 }
 
-/* HEADER STYLING - Fixed layout */
+/* HEADER STYLING - Title starts from center */
 header {
     padding: 5px 30px 10px 30px;
     background-color: #2e7d32;
@@ -24,65 +24,45 @@ header {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Changed back to center */
-    flex-wrap: wrap;
-}
-
-/* LEFT SIDE: Logo + Navigation */
-.header-left {
-    flex: 0 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Left column for nav, rest for title */
     align-items: center;
-    gap: 20px; /* Space between logo and nav */
+    gap: 20px;
+    position: relative;
 }
 
-/* Logo - make it visible and proper size */
-.header-logo img {
-    width: 150px; /* Increased from 100px */
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid white;
-    padding: 3px;
-    background-color: white;
-    display: block; /* Ensures it shows */
-}
-
-/* Navigation moved to LEFT side */
-.header-nav {
+/* LEFT: Navigation ONLY (no logo in this area) */
+.header-left {
     display: flex;
-    gap: 10px; /* Space between buttons */
-    margin-top: 0;
+    gap: 10px;
+    justify-content: flex-start;
 }
 
-.header-nav a {
+/* Navigation buttons styling */
+.nav-button {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 20px; /* Better padding */
+    padding: 8px 20px;
     border-radius: 4px;
     transition: all 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     font-size: 14px;
-    white-space: nowrap; /* Prevents wrapping */
+    white-space: nowrap;
 }
 
-.header-nav a:hover {
+.nav-button:hover {
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid white;
 }
 
-/* CENTER: Farm Title */
+/* CENTER: Title starts from middle */
 .header-center {
-    flex: 1;
+    position: absolute;
+    left: 50%; /* Start from middle of screen */
+    transform: translateX(-50%); /* Adjust for title width */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
 }
 
 /* Farm Title */
@@ -93,6 +73,7 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-weight: bold;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .farm-tagline {
@@ -102,15 +83,23 @@ header {
     font-style: italic;
 }
 
-/* RIGHT SIDE: Empty for balance (optional) */
+/* RIGHT: Logo area */
 .header-right {
-    width: 200px; /* Matches left side width for balance */
-    flex: 0 0 auto;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Remove old navigation styles */
-nav, .logo-container {
-    display: none; /* Hide old structure */
+/* Logo */
+.header-logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 3px;
+    background-color: white;
+    display: block;
 }
 
 /* Divider line */
@@ -118,7 +107,12 @@ nav, .logo-container {
     height: 1px;
     background: rgba(255, 255, 255, 0.3);
     width: 100%;
-    margin: 10px 0 5px 0;
+    margin-top: 15px;
+}
+
+/* Hide old elements */
+.header-text, .logo-container, nav {
+    display: none;
 }
 
 /* Add this at the top of your style.css file */
