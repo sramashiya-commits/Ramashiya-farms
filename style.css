@@ -231,25 +231,26 @@ img {
     margin-bottom: 8px;
 }
 
-/* HERO SECTION - Minimal elegant */
+/* HERO SECTION - Fixed position, no overlap */
 .hero {
-    background: linear-gradient(to right, rgba(232, 245, 233, 0.7), rgba(255, 255, 255, 0.9)) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
     padding: 25px !important;
-    margin: 25px auto !important;
+    margin: 20px auto 30px auto !important; /* Top margin only */
     border-radius: 8px !important;
-    position: relative !important;
-    z-index: 100 !important;
     text-align: center;
     max-width: 900px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
+    position: relative;
+    z-index: 1; /* Below header but above content */
 }
 
+/* Italic font as requested */
 .hero h2 {
-    color: #1b5e20 !important; /* Darker green */
-    font-size: 1.9rem !important;
+    color: #1b5e20 !important;
+    font-size: 1.8rem !important;
     margin-bottom: 12px !important;
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    font-style: italic !important; /* Added italic */
 }
 
 .hero p {
@@ -258,5 +259,5 @@ img {
     line-height: 1.6 !important;
     max-width: 750px !important;
     margin: 0 auto !important;
-    padding: 0 10px !important;
+    font-style: italic !important; /* Added italic */
 }
