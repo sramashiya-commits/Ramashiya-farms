@@ -7,9 +7,9 @@ body {
     padding-top: 220px;
 }
 
-/* HEADER STYLING - Title starts from center */
+/* HEADER STYLING - Three-column layout */
 header {
-    padding: 5px 30px 10px 30px;
+    padding: 10px 30px;
     background-color: #2e7d32;
     color: white;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
@@ -20,55 +20,51 @@ header {
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
-    min-height: 80px;
+    min-height: 100px;
 }
 
+/* Three-column layout */
 .header-container {
     display: grid;
-    grid-template-columns: auto 1fr; /* Left column for nav, rest for title */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
     align-items: center;
-    gap: 20px;
-    position: relative;
+    height: 100%;
 }
 
-/* LEFT: Navigation ONLY (no logo in this area) */
+/* COLUMN 1: Logo - Full left side */
 .header-left {
     display: flex;
-    gap: 10px;
-    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
 }
 
-/* Navigation buttons styling */
-.nav-button {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 14px;
-    white-space: nowrap;
+.header-logo {
+    width: 100%;
+    height: 80px; /* Fixed height for logo area */
+    display: flex;
+    align-items: center;
 }
 
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid white;
+.header-logo img {
+    width: auto;
+    height: 100%; /* Logo fills the height */
+    max-height: 80px; /* Limit max height */
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 3px;
+    background-color: white;
+    object-fit: contain; /* Keeps aspect ratio */
 }
 
-/* CENTER: Title starts from middle */
+/* COLUMN 2: Title - Centered */
 .header-center {
-    position: absolute;
-    left: 50%; /* Start from middle of screen */
-    transform: translateX(-50%); /* Adjust for title width */
     text-align: center;
+    padding: 0 20px;
 }
 
-/* Farm Title */
-.farm-title {
+.main-title {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-weight: bold;
@@ -76,43 +72,53 @@ header {
     white-space: nowrap;
 }
 
-.farm-tagline {
+.tagline {
     margin: 5px 0 0 0;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
     font-style: italic;
+    font-weight: 500;
 }
 
-/* RIGHT: Logo area */
+/* COLUMN 3: Navigation - Full right side */
 .header-right {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    height: 100%;
 }
 
-/* Logo */
-.header-logo img {
-    width: 120px;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid white;
-    padding: 3px;
-    background-color: white;
-    display: block;
-}
-
-/* Divider line */
-.header-divider {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.3);
+.right-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
     width: 100%;
-    margin-top: 15px;
 }
 
-/* Hide old elements */
-.header-text, .logo-container, nav {
-    display: none;
+.right-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    flex: 1; /* Each button takes equal space */
+    max-width: 120px; /* Limit button width */
+}
+
+.right-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+}
+
+/* Body padding */
+body {
+    padding-top: 120px;
 }
 
 /* Add this at the top of your style.css file */
