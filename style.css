@@ -231,23 +231,29 @@ img {
     margin-bottom: 8px;
 }
 
-/* TEMPORARY: Force hero section to be visible */
+/* HERO SECTION - Refined size */
 .hero {
-    background-color: #e8f5e9 !important;
-    padding: 40px !important;
-    margin: 40px 0 !important;
-    border: 3px solid #2e7d32 !important;
-    border-radius: 10px !important;
+    background-color: #f1f8e9 !important; /* Lighter green background */
+    padding: 30px !important; /* Reduced from 40px */
+    margin: 30px 0 !important; /* Reduced from 40px */
+    border: 2px solid #2e7d32 !important; /* Thinner border */
+    border-radius: 8px !important;
     position: relative !important;
     z-index: 100 !important;
+    text-align: center;
 }
 
 .hero h2 {
     color: #2e7d32 !important;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important; /* Reduced from 2.5rem */
+    margin-bottom: 15px !important;
+    font-weight: bold;
 }
 
 .hero p {
-    color: #333 !important;
-    font-size: 1.3rem !important;
+    color: #444 !important;
+    font-size: 1.1rem !important; /* Reduced from 1.3rem */
+    line-height: 1.6 !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
 }
