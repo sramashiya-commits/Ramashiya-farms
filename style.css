@@ -10,16 +10,18 @@ body {
 /* HEADER STYLING - Fixed Green Banner */
 header {
     padding: 10px 30px;
-    background-color: #2e7d32; /* Solid green */
-    color: white; /* White text for all header content */
+    background-color: #2e7d32;
+    color: white;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    position: fixed; /* Makes it stay at top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensures it stays above other content */
+    z-index: 1000;
     width: 100%;
-    box-sizing: border-box; /* Includes padding in width calculation */
+    box-sizing: border-box;
+
+    min-height: 140px; /* 👈 ADD THIS LINE */
 }
 
 .header-container {
@@ -208,36 +210,3 @@ img {
 /* ===============================
    NAVIGATION FIX
    =============================== */
-
-nav {
-    background-color: #388e3c;
-    padding: 12px 0;
-    text-align: center;
-    position: relative;
-    z-index: 10; /* ensures nav stays visible */
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: bold;
-    font-size: 1.05em;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-header {
-    margin-bottom: 0;
-}
-
-nav {
-    margin-top: 0;
-}
-
-nav {
-    display: block !important;
-    background: red !important;
-}
