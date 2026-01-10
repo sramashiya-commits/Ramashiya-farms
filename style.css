@@ -7,7 +7,7 @@ body {
     padding-top: 220px;
 }
 
-/* HEADER STYLING - Compact Center Title */
+/* HEADER STYLING - Fixed layout */
 header {
     padding: 5px 30px 10px 30px;
     background-color: #2e7d32;
@@ -26,40 +26,55 @@ header {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center; /* Changed back to center */
     flex-wrap: wrap;
 }
 
-/* Logo container - now holds navigation buttons */
-.logo-container {
+/* LEFT SIDE: Logo + Navigation */
+.header-left {
     flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
+    align-items: center;
+    gap: 20px; /* Space between logo and nav */
 }
 
-/* Logo styling */
-.logo-container img {
-    width: 100px;
+/* Logo - make it visible and proper size */
+.header-logo img {
+    width: 150px; /* Increased from 100px */
     height: auto;
-    max-width: none;
     border-radius: 5px;
     border: 2px solid white;
-    padding: 2px;
+    padding: 3px;
     background-color: white;
-    margin-bottom: 5px;
+    display: block; /* Ensures it shows */
 }
 
-/* Navigation moved to logo container */
-.logo-container nav {
-    margin-top: 5px;
-    padding: 0;
-    border-top: none;
-    text-align: left;
+/* Navigation moved to LEFT side */
+.header-nav {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 0;
 }
 
-/* Center section for farm title */
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 20px; /* Better padding */
+    border-radius: 4px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.header-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+}
+
+/* CENTER: Farm Title */
 .header-center {
     flex: 1;
     text-align: center;
@@ -67,10 +82,10 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60px;
+    padding: 0 20px;
 }
 
-/* Farm Title - Centered */
+/* Farm Title */
 .farm-title {
     margin: 0;
     font-size: 2.2rem;
@@ -87,35 +102,15 @@ header {
     font-style: italic;
 }
 
-/* Hide old welcome text */
-.header-text {
-    display: none;
+/* RIGHT SIDE: Empty for balance (optional) */
+.header-right {
+    width: 200px; /* Matches left side width for balance */
+    flex: 0 0 auto;
 }
 
-/* Navigation styling */
-nav {
-    background-color: transparent;
-    padding: 0;
-    text-align: left;
-    margin-top: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 15px;
-    border-radius: 3px;
-    transition: all 0.3s;
-    border: 1px solid transparent;
-    font-size: 14px;
-    margin: 0 5px 5px 0;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Remove old navigation styles */
+nav, .logo-container {
+    display: none; /* Hide old structure */
 }
 
 /* Divider line */
@@ -123,12 +118,7 @@ nav a:hover {
     height: 1px;
     background: rgba(255, 255, 255, 0.3);
     width: 100%;
-    margin: 8px 0 5px 0;
-}
-
-/* Container spacing */
-.container {
-    padding: 20px 30px;
+    margin: 10px 0 5px 0;
 }
 
 /* Add this at the top of your style.css file */
