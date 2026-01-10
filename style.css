@@ -230,3 +230,23 @@ img {
     margin-bottom: 8px;
 }
 
+/* TEMPORARY: Force hero section to be visible */
+.hero {
+    background-color: #e8f5e9 !important;
+    padding: 40px !important;
+    margin: 40px 0 !important;
+    border: 3px solid #2e7d32 !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+.hero h2 {
+    color: #2e7d32 !important;
+    font-size: 2.5rem !important;
+}
+
+.hero p {
+    color: #333 !important;
+    font-size: 1.3rem !important;
+}
