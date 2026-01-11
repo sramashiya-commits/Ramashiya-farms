@@ -1,10 +1,17 @@
-/* 1. Body with gradient and padding for fixed header */
+/* 1. Body with subtle farm landscape background and padding for fixed header */
 body {
-    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
     min-height: 100vh;
     margin: 0;
     padding: 0;
     padding-top: 220px;
+
+    /* Layered gradient for subtle sky + fields effect */
+    background: 
+        linear-gradient(to top, rgba(200, 230, 200, 0.6) 0%, rgba(160, 210, 160, 0.6) 50%), /* soft green field */
+        linear-gradient(to bottom, #e8f5e9, #ffffff); /* light sky fade */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* subtle parallax effect */
 }
 
 /* HEADER STYLING - Three-column layout */
@@ -464,4 +471,14 @@ header.shrink .main-title {
 
 header.shrink .header-logo img {
     width: 120px;
+}
+
+/* Subtle hills/field texture overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 80%, rgba(255,255,255,0.08) 0%, transparent 70%);
+    z-index: -1; /* behind everything */
 }
