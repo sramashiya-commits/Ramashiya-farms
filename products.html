@@ -45,6 +45,18 @@ fetch("header.html")
     document.getElementById("site-header").innerHTML = data;
   });
 </script>
+
+<script>
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("menu-toggle")) {
+        const nav = document.querySelector(".right-nav");
+        if (nav) {
+            nav.classList.toggle("show");
+        }
+    }
+});
+</script>
+    
     
     
 </body>
