@@ -227,33 +227,28 @@ img {
 
 /* HERO SECTION - Fixed position, no overlap */
 .hero {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    padding: 25px !important;
-    margin: 20px auto 30px auto !important; /* Top margin only */
-    border-radius: 8px !important;
+    background-color: rgba(255, 255, 255, 0.85); /* slightly more transparent */
+    padding: 50px 30px;
+    margin: 0 auto 50px auto;
+    border-radius: 12px;
     text-align: center;
-    max-width: 900px !important;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
-    position: relative;
-    z-index: 1; /* Below header but above content */
+    max-width: 900px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
-
-/* Italic font as requested */
 .hero h2 {
-    color: #1b5e20 !important;
-    font-size: 1.8rem !important;
-    margin-bottom: 12px !important;
-    font-weight: 600;
-    font-style: italic !important; /* Added italic */
+    color: #1b5e20;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: italic;
 }
-
 .hero p {
-    color: #333 !important;
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-    max-width: 750px !important;
-    margin: 0 auto !important;
-    font-style: italic !important; /* Added italic */
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    font-style: italic;
 }
 
 /* PROFESSIONAL CONTENT LAYOUT */
