@@ -413,3 +413,38 @@ img {
 body.inner-page {
     padding-top: 120px;
 }
+
+/* ===============================
+   MOBILE MENU
+   =============================== */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .right-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #2e7d32;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 6px;
+        width: 180px;
+    }
+
+    .right-nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
