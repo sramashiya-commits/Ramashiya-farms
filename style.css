@@ -374,3 +374,42 @@ img {
     text-align: left;
     padding: 10px 0;
 }
+
+/* ===============================
+   SMALLER HEADER FOR INNER PAGES
+   =============================== */
+
+.inner-page header {
+    min-height: 70px;
+    padding: 6px 20px;
+}
+
+/* Reduce logo size */
+.inner-page .header-logo img {
+    width: 130px;
+    max-height: 45px;
+    padding: 3px;
+}
+
+/* Reduce title size */
+.inner-page .main-title {
+    font-size: 1.6rem;
+}
+
+/* Reduce tagline */
+.inner-page .tagline {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+/* Reduce nav button size */
+.inner-page .right-nav a {
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+/* Reduce top spacing below fixed header */
+.inner-page body,
+body.inner-page {
+    padding-top: 120px;
+}
