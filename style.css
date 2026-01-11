@@ -448,3 +448,20 @@ body.inner-page {
         display: block;
     }
 }
+
+/* ===============================
+   SHRINK HEADER ON SCROLL
+   =============================== */
+
+header.shrink {
+    min-height: 60px;
+    padding: 5px 20px;
+}
+
+header.shrink .main-title {
+    font-size: 1.4rem;
+}
+
+header.shrink .header-logo img {
+    width: 120px;
+}
