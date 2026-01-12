@@ -461,3 +461,48 @@ body::before {
     background: radial-gradient(circle at 50% 80%, rgba(255,255,255,0.08) 0%, transparent 70%);
     z-index: -1; /* behind everything */
 }
+
+.animal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* space between each card */
+  max-width: 1000px; /* optional: limits width */
+  margin: 0 auto; /* centers gallery */
+  padding: 20px;
+}
+
+.animal-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #f9f9f9; /* soft card background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.animal-card img {
+  width: 250px; /* same size for all photos */
+  height: 200px; /* same height */
+  object-fit: cover; /* crop nicely */
+  border-radius: 8px;
+}
+
+.animal-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.animal-text h3 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #16a085;
+}
+
+.animal-text p {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #34495e;
+}
