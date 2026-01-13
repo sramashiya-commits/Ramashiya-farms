@@ -549,3 +549,37 @@ header a,
 header nav a {
     color: #ffffff !important;
 }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;                 /* keeps logo + nav aligned */
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 40px;             /* large header */
+    background-color: #1f4f2e;
+
+    transition:
+        padding 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+header.shrink {
+    padding: 12px 40px;             /* smaller header */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+header nav a {
+    white-space: nowrap;
+    color: #ffffff;
+}
