@@ -583,3 +583,12 @@ header nav a {
     white-space: nowrap;
     color: #ffffff;
 }
+
+/* === HEADER SPACER (FIXES HOME PAGE SHIFT) === */
+.header-spacer {
+    height: 120px; /* matches normal header height */
+}
+
+header.shrink + .header-spacer {
+    height: 80px; /* matches shrunk header height */
+}
