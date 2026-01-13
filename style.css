@@ -584,9 +584,63 @@ header nav a {
 
 /* === HEADER SPACER (FIXES HOME PAGE SHIFT) === */
 .header-spacer {
-    height: 120px; /* matches normal header height */
+    height: 120px; /* match/* ===== Header Layout ===== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: padding 0.3s ease;
+}
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+.header-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.2s;
+}
+
+.right-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* ===== Shrinking Header ===== */
+header.shrink .header-container {
+  padding: 10px 40px;
+}
+
+header.shrink .header-logo img {
+  height: 40px;
+}
+es normal header height */
 }
 
 header.shrink + .header-spacer {
     height: 80px; /* matches shrunk header height */
 }
+
