@@ -16,18 +16,22 @@ body {
 
 /* HEADER STYLING - Three-column layout */
 header {
-    padding: 10px 30px;
-    background-color: #2e7d32;
-    color: white;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
     width: 100%;
-    box-sizing: border-box;
-    min-height: 100px;
+    z-index: 1000;
+
+    padding: 28px 60px;
+    background-color: #2f6f3e; /* 👈 your REAL green */
+
+    transition:
+        padding 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+header.shrink {
+    padding: 12px 60px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* Three-column layout */
