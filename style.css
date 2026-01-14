@@ -581,3 +581,46 @@ header.shrink {
   flex: 0 0 auto;
   min-width: max-content; /* 🔑 guarantees full words */
 }
+
+/* ===============================
+   HEADER STABILITY FIX (NO SHRINK)
+   =============================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: #1f4f2e;
+    padding: 16px 24px;
+}
+
+/* Reserve space so content does NOT slide under header */
+body {
+    padding-top: 140px;   /* ✅ FIXES HERO OVERLAP */
+}
+
+/* ===============================
+   NAV WIDTH FIX (CONTACT ISSUE)
+   =============================== */
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-nav {
+    display: flex;
+    gap: 14px;
+    white-space: nowrap;
+    width: auto;          /* 🔑 CRITICAL */
+}
+
+.right-nav a {
+    padding: 8px 16px;
+    font-size: 16px;
+    white-space: nowrap;
+    flex: 0 0 auto;       /* 🔑 CONTENT CONTROLS WIDTH */
+}
