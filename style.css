@@ -650,7 +650,7 @@ header.shrink + .header-spacer {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 24px;
   box-sizing: border-box;
 }
 
@@ -661,7 +661,7 @@ header.shrink + .header-spacer {
 
 /* ===== Center (Title) ===== */
 .header-center {
-  flex: 0 1 40%;        /* 🔑 LIMIT the width */
+  flex: 0 1 35%;        /* 🔑 LIMIT the width */
   text-align: center;
   white-space: nowrap; /* prevents wrapping that pushes nav */
   overflow: hidden;
