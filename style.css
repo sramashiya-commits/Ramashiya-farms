@@ -13,26 +13,6 @@ body {
     background-attachment: fixed; /* subtle parallax effect */
 }
 
-/* HEADER STYLING - Three-column layout */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-
-    padding: 28px 60px;
-    background-color: #2f6f3e; /* 👈 your REAL green */
-
-    transition:
-        padding 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-header.shrink {
-    padding: 12px 60px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-
 /* COLUMN 1: Logo - Full left side - FIXED */
 .header-left {
     display: flex;
@@ -429,23 +409,6 @@ body.inner-page {
     }
 }
 
-/* ===============================
-   SHRINK HEADER ON SCROLL
-   =============================== */
-
-header.shrink {
-    min-height: 60px;
-    padding: 5px 20px;
-}
-
-header.shrink .main-title {
-    font-size: 1.4rem;
-}
-
-header.shrink .header-logo img {
-    width: 120px;
-}
-
 /* Subtle hills/field texture overlay */
 body::before {
     content: "";
@@ -500,67 +463,13 @@ body::before {
   line-height: 1.5;
   color: #34495e;
 }
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-
-  padding: 30px 60px;
-  background: rgba(255, 255, 255, 0.6);
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  transition:
-    padding 0.35s ease,
-    background 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-header.scrolled {
-  padding: 12px 60px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-/* === HARD RESET HEADER COLOR === */
-header {
-    background-color: #1f4f2e !important; /* deep farm green */
-    opacity: 1 !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-/* === LOCK HEADER TEXT COLOR === */
-header a,
-header nav a {
-    color: #ffffff !important;
-}
-
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-
-    display: flex;                 /* keeps logo + nav aligned */
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 28px 40px;             /* large header */
     background-color: #1f4f2e;
-
-    transition:
-        padding 0.35s ease,
-        box-shadow 0.35s ease;
-}
-
-header.shrink {
-    padding: 12px 40px;             /* smaller header */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    padding: 20px 24px;
 }
 
 header nav {
@@ -621,21 +530,10 @@ header nav a {
   border-radius: 5px;
 }
 
-/* ===== Shrinking Header ===== */
-header.shrink .header-container {
-  padding: 10px 40px;
+header.shrink {
+    padding: 10px 24px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
-
-header.shrink .header-logo img {
-  height: 40px;
-}
-es normal header height */
-}
-
-header.shrink + .header-spacer {
-    height: 80px; /* matches shrunk header height */
-}
-
 /* ===== Header Container ===== */
 .header-container {
   display: flex;
