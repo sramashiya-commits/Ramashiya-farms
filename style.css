@@ -583,81 +583,70 @@ header.shrink {
 }
 
 /* ===============================
-   HEADER + NAV STABILITY FIX
+   FORCE HEADER + NAV FIXES
    =============================== */
 
-/* --- HEADER BANNER --- */
+/* Header height / banner */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    background-color: #1f4f2e;  /* farm green */
-    padding: 16px 24px;          /* reduces height */
-    box-sizing: border-box;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background-color: #1f4f2e !important;
+    padding: 16px 24px !important;
+    box-sizing: border-box !important;
 }
 
-/* --- RESERVE SPACE FOR HEADER TO PREVENT OVERLAP --- */
+/* Reserve space below fixed header */
 body {
-    padding-top: 140px;  /* adjust to match header height */
+    padding-top: 140px !important; /* adjust if header is taller */
 }
 
-/* --- HEADER CONTAINER FLEX --- */
+/* Container flex layout */
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* --- LEFT: LOGO --- */
-.header-left {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-/* --- CENTER: TITLE --- */
+/* Center title */
 .header-center {
-    flex: 0 1 35%;        /* limits width so nav has space */
-    text-align: center;
-    white-space: nowrap;   /* prevents title wrapping */
+    flex: 0 1 35% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
 }
 
-/* --- RIGHT: NAV --- */
+/* Right nav */
 .header-right {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
 }
 
-/* --- NAV BUTTONS --- */
 .right-nav {
-    display: flex;
-    gap: 14px;           /* spacing between buttons */
-    white-space: nowrap;  /* prevent text wrapping */
-    width: auto;         /* only as wide as needed */
+    display: flex !important;
+    gap: 14px !important;
+    white-space: nowrap !important;
+    width: auto !important;
 }
 
 .right-nav a {
-    flex: 0 0 auto;       /* button width controlled by content */
-    padding: 8px 16px;
-    font-size: 16px;
-    white-space: nowrap;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background-color: rgba(255,255,255,0.1);
-    transition: background 0.2s;
+    flex: 0 0 auto !important;
+    padding: 8px 16px !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    background-color: rgba(255,255,255,0.1) !important;
 }
-
 .right-nav a:hover {
-    background-color: rgba(255,255,255,0.3);
-    border-color: white;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-color: white !important;
 }
