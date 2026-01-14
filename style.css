@@ -603,24 +603,37 @@ body {
 }
 
 /* ===============================
-   NAV WIDTH FIX (CONTACT ISSUE)
+   NAV FIX: CONTACT VISIBLE
    =============================== */
 
 .header-right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .right-nav {
     display: flex;
-    gap: 14px;
-    white-space: nowrap;
-    width: auto;          /* 🔑 CRITICAL */
+    gap: 14px;          /* space between buttons */
+    white-space: nowrap; /* prevent text from wrapping */
+    width: auto;         /* nav only takes as much space as needed */
 }
 
 .right-nav a {
-    padding: 8px 16px;
+    padding: 8px 16px;   /* comfortable button size */
     font-size: 16px;
-    white-space: nowrap;
-    flex: 0 0 auto;       /* 🔑 CONTENT CONTROLS WIDTH */
+    white-space: nowrap;  /* never cut words */
+    flex: 0 0 auto;       /* content decides width */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+
+.right-nav a:hover {
+    background-color: rgba(255,255,255,0.3);
+    border-color: white;
 }
