@@ -13,94 +13,6 @@ body {
     background-attachment: fixed; /* subtle parallax effect */
 }
 
-/* COLUMN 1: Logo - Full left side - FIXED */
-.header-left {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.header-logo {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align logo to left */
-}
-
-.header-logo img {
-    width: 180px; /* Current size */
-    height: auto;
-    max-height: 70px;
-    border-radius: 8px;
-    border: 3px solid white;
-    padding: 5px;
-    background-color: white;
-    object-fit: contain;
-    display: block;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* COLUMN 2: Title - Centered */
-.header-center {
-    text-align: center;
-    padding: 0 20px;
-}
-
-.main-title {
-    margin: 0;
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-.tagline {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.95);
-    font-style: italic;
-    font-weight: 500;
-}
-
-/* COLUMN 3: Navigation - Full right side */
-.header-right {
-    display: flex;
-    justify-content: flex-end; /* Align to right */
-    align-items: center;
-    height: 100%;
-}
-
-.right-nav {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.right-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 18px;
-    border-radius: 4px;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 16px;
-    white-space: nowrap;
-    text-align: center;
-
-    flex: 0 0 auto;   /* ✅ content decides width */
-}
-
-.right-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid white;
-}
-
 /* Additional styles for Ramashiya Farms */
 img {
     max-width: 100%;
@@ -289,13 +201,7 @@ img {
     text-align: center !important;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px 20px;
-        margin: 0 10px;
-    }
-    
+   
     .section {
         padding: 20px;
         margin-bottom: 30px;
@@ -335,79 +241,6 @@ img {
     padding: 10px 0;
 }
 
-/* ===============================
-   SMALLER HEADER FOR INNER PAGES
-   =============================== */
-
-.inner-page header {
-    min-height: 70px;
-    padding: 6px 20px;
-}
-
-/* Reduce logo size */
-.inner-page .header-logo img {
-    width: 130px;
-    max-height: 45px;
-    padding: 3px;
-}
-
-/* Reduce title size */
-.inner-page .main-title {
-    font-size: 1.6rem;
-}
-
-/* Reduce tagline */
-.inner-page .tagline {
-    font-size: 0.9rem;
-    margin-top: 2px;
-}
-
-/* Reduce nav button size */
-.inner-page .right-nav a {
-    padding: 6px 14px;
-    font-size: 14px;
-}
-
-/* Reduce top spacing below fixed header */
-.inner-page body,
-body.inner-page {
-    padding-top: 120px;
-}
-
-/* ===============================
-   MOBILE MENU
-   =============================== */
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .right-nav {
-        display: none;
-        flex-direction: column;
-        background-color: #2e7d32;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 6px;
-        width: 180px;
-    }
-
-    .right-nav.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
 
 /* Subtle hills/field texture overlay */
 body::before {
@@ -463,190 +296,156 @@ body::before {
   line-height: 1.5;
   color: #34495e;
 }
+
+/* ===============================
+   CLEAN HEADER + NAV FOR RAMASHIYA FARMS
+   =============================== */
+
+/* ---------- HEADER ---------- */
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #1f4f2e;
-    padding: 20px 24px;
-}
+    background-color: #1f4f2e; /* farm green */
+    padding: 16px 24px;        /* smaller banner height */
+    box-sizing: border-box;
 
-header nav {
     display: flex;
-    gap: 30px;
-    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header nav a {
-    white-space: nowrap;
-    color: #ffffff;
+/* Reserve space below header so Hero/Content not overlapped */
+body {
+    padding-top: 120px; /* adjust if header taller */
 }
 
-/* === HEADER SPACER (FIXES HOME PAGE SHIFT) === */
-.header-spacer {
-    height: 120px; /* match/* ===== Header Layout ===== */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: padding 0.3s ease;
-}
-
+/* ---------- LEFT: LOGO ---------- */
 .header-left {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .header-logo img {
-  height: 60px;
-  width: auto;
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: white;
+    object-fit: contain;
 }
 
+/* ---------- CENTER: TITLE ---------- */
 .header-center {
-  flex: 1;
-  text-align: center;
+    flex: 0 1 35%;        /* limits width so nav fits */
+    text-align: center;
+    white-space: nowrap;   /* prevents wrapping */
 }
 
+.main-title {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.95);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ---------- RIGHT: NAV ---------- */
 .header-right {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.right-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: background 0.2s;
-}
-
-.right-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-header.shrink {
-    padding: 10px 24px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-/* ===== Header Container ===== */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px 24px;
-  box-sizing: border-box;
-}
-
-/* ===== Left (Logo) ===== */
-.header-left {
-  flex: 0 0 auto;
-}
-
-/* ===== Center (Title) ===== */
-.header-center {
-  flex: 0 1 35%;        /* 🔑 LIMIT the width */
-  text-align: center;
-  white-space: nowrap; /* prevents wrapping that pushes nav */
-}
-
-/* ===== Right (Navigation) ===== */
-.header-right {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .right-nav {
-  display: flex;
-  gap: 18px;            /* controls spacing between buttons */
-  white-space: nowrap; /* 🔑 keeps Contact visible */
-}
-
-/* Nav links */
-.right-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 6px 10px;
-}
-
-.header-right {
-  flex: 0 0 auto;
-  min-width: max-content; /* 🔑 guarantees full words */
-}
-
-/* ===============================
-   FORCE HEADER + NAV FIXES
-   =============================== */
-
-/* Header height / banner */
-header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
-    background-color: #1f4f2e !important;
-    padding: 16px 24px !important;
-    box-sizing: border-box !important;
-}
-
-/* Reserve space below fixed header */
-body {
-    padding-top: 140px !important; /* adjust if header is taller */
-}
-
-/* Container flex layout */
-.header-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Center title */
-.header-center {
-    flex: 0 1 35% !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-}
-
-/* Right nav */
-.header-right {
-    flex: 0 0 auto !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-}
-
-.right-nav {
-    display: flex !important;
-    gap: 14px !important;
-    white-space: nowrap !important;
-    width: auto !important;
+    display: flex;
+    gap: 14px;           /* space between buttons */
+    white-space: nowrap;  /* prevents cutting off Contact */
 }
 
 .right-nav a {
-    flex: 0 0 auto !important;
-    padding: 8px 16px !important;
-    font-size: 16px !important;
-    white-space: nowrap !important;
-    text-align: center !important;
-    color: white !important;
-    text-decoration: none !important;
-    border-radius: 4px !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
-    background-color: rgba(255,255,255,0.1) !important;
+    flex: 0 0 auto;       /* button width = content */
+    padding: 8px 16px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
+    transition: background 0.2s;
 }
+
 .right-nav a:hover {
-    background-color: rgba(255,255,255,0.3) !important;
-    border-color: white !important;
+    background-color: rgba(255,255,255,0.3);
+    border-color: white;
+}
+
+/* ---------- MOBILE MENU ---------- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .right-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #2e7d32;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 6px;
+        width: 180px;
+    }
+
+    .right-nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ---------- INNER PAGE SMALLER HEADER ---------- */
+.inner-page header {
+    padding: 10px 20px;
+}
+
+.inner-page .header-logo img {
+    height: 45px;
+}
+
+.inner-page .main-title {
+    font-size: 1.6rem;
+}
+
+.inner-page .tagline {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.inner-page .right-nav a {
+    padding: 6px 14px;
+    font-size: 14px;
 }
