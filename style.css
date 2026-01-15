@@ -445,3 +445,22 @@ body {
     padding: 6px 14px;
     font-size: 14px;
 }
+
+/* ===============================
+   HOME PAGE — BACKGROUND ONLY
+   =============================== */
+
+/* Hide all content sections on home page */
+.home-page .hero,
+.home-page .container,
+.home-page .section,
+.home-page .product-grid,
+.home-page .product-card {
+    display: none !important;
+}
+
+/* Optional: slightly enhance background visibility */
+.home-page body,
+body.home-page {
+    padding-top: 120px; /* keep header spacing */
+}
