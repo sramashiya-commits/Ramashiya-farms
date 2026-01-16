@@ -5,9 +5,9 @@ body {
     padding: 0;
     
     /* Layered gradient for subtle sky + fields effect */
-    background: 
-        linear-gradient(to top, rgba(200, 230, 200, 0.6) 0%, rgba(160, 210, 160, 0.6) 50%), /* soft green field */
-        linear-gradient(to bottom, #e8f5e9, #ffffff); /* light sky fade */
+    /* background: 
+        linear-gradient(to top, rgba(200, 230, 200, 0.6) 0%, rgba(160, 210, 160, 0.6) 50%), 
+        linear-gradient(to bottom, #e8f5e9, #ffffff); */ /* temporarily disabled */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* subtle parallax effect */
