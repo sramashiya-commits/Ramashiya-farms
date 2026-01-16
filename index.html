@@ -1,106 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Ramashiya Farms — Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-page"
-      style="background: url('Images/Images/homepage.jpg') center/cover no-repeat fixed;">
+<body class="home-page">
 
-<div id="site-header"></div>
+    <!-- REUSABLE HEADER -->
+    <div id="site-header"></div>
 
-<div class="header-spacer"></div>
+    <!-- Optional spacer for fixed header -->
+    <div class="header-spacer"></div>
 
-    <!-- HERO -->
-    <div class="hero">
-        <h2>Rooted in Nature, Steeped in LOVE</h2>
-        <p>
-            Ethical farming, healthy livestock, and sustainable practices —
-            nurturing the land while feeding our communities.
-        </p>
-    </div>
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/27899791692" target="_blank"
+       style="position:fixed; bottom:20px; right:20px;
+       background-color:#25D366; color:white; padding:15px 20px;
+       border-radius:50px; font-weight:bold; text-decoration:none;
+       box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+       WhatsApp Chat
+    </a>
 
-    <!-- PURPOSE -->
-    <div class="section">
-        <h2>Our Purpose</h2>
-        <p>
-            Ramashiya Farms exists to nurture life through responsible farming,
-            deep respect for nature, and commitment to quality.
-            We believe healthy animals, healthy land, and healthy communities
-            are inseparable.
-        </p>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 Ramashiya Farms. All rights reserved.</p>
+        <p>Fresh | Sustainable | Local</p>
+    </footer>
 
-    <!-- VISION -->
-    <div class="section">
-        <h2>Our Vision</h2>
-        <p>
-            To become a trusted, community-rooted farm that sets the benchmark
-            for sustainable livestock farming while contributing to food security
-            and economic growth in South Africa.
-        </p>
-    </div>
+    <!-- SCRIPT: Load Reusable Header -->
+    <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById("site-header").innerHTML = data;
+      });
+    </script>
 
-    <!-- MISSION -->
-    <div class="section">
-        <h2>Our Mission</h2>
-        <p>
-            To raise high-quality goats, poultry, and farm produce using ethical,
-            transparent, and sustainable methods — delivering value to our
-            customers while preserving the environment for future generations.
-        </p>
-    </div>
-
-    <!-- CORE VALUES -->
-    <div class="section">
-        <h2>Our Core Values</h2>
-        <ul style="line-height: 1.8; padding-left: 20px;">
-            <li><strong>Integrity:</strong> Honest farming with transparency and accountability.</li>
-            <li><strong>Sustainability:</strong> Protecting land, animals, and natural resources.</li>
-            <li><strong>Quality:</strong> No compromise on animal welfare or product standards.</li>
-            <li><strong>Community:</strong> Growing together with our customers and neighbours.</li>
-            <li><strong>Respect for Nature:</strong> Nature is our partner, not a resource to exploit.</li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2024 Ramashiya Farms. All rights reserved.</p>
-    <p>Fresh | Sustainable | Local</p>
-</footer>
-
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/27899791692" target="_blank"
-   style="position:fixed; bottom:20px; right:20px;
-   background-color:#25D366; color:white; padding:15px 20px;
-   border-radius:50px; font-weight:bold; text-decoration:none;
-   box-shadow:0 4px 6px rgba(0,0,0,0.2);">
-   WhatsApp Chat
-</a>
-
-<script>
-fetch("header.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("site-header").innerHTML = data;
-  });
-</script>
-
-<script>
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    if (!header) return;
-
-    if (window.scrollY > 50) {
-        header.classList.add("shrink");
-    } else {
-        header.classList.remove("shrink");
-    }
-});
-</script>
-    
-    
 </body>
 </html>
