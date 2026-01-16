@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Ramashiya Farms — Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,18 +8,7 @@
 
     <!-- REUSABLE HEADER -->
     <div id="site-header"></div>
-
-    <!-- Optional spacer for fixed header -->
     <div class="header-spacer"></div>
-
-    <!-- WHATSAPP BUTTON -->
-    <a href="https://wa.me/27899791692" target="_blank"
-       style="position:fixed; bottom:20px; right:20px;
-       background-color:#25D366; color:white; padding:15px 20px;
-       border-radius:50px; font-weight:bold; text-decoration:none;
-       box-shadow:0 4px 6px rgba(0,0,0,0.2);">
-       WhatsApp Chat
-    </a>
 
     <!-- FOOTER -->
     <footer>
@@ -28,13 +16,32 @@
         <p>Fresh | Sustainable | Local</p>
     </footer>
 
-    <!-- SCRIPT: Load Reusable Header -->
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/27899791692" target="_blank">
+        WhatsApp Chat
+    </a>
+
+    <!-- LOAD HEADER.HTML -->
     <script>
     fetch("header.html")
       .then(response => response.text())
       .then(data => {
-          document.getElementById("site-header").innerHTML = data;
+        document.getElementById("site-header").innerHTML = data;
       });
+    </script>
+
+    <!-- SHRINK HEADER ON SCROLL -->
+    <script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (!header) return;
+
+        if (window.scrollY > 50) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
     </script>
 
 </body>
