@@ -464,3 +464,28 @@ body {
 body.home-page {
     padding-top: 120px; /* keep header spacing */
 }
+
+/* ===============================
+   HOME PAGE BACKGROUND IMAGE
+   =============================== */
+
+body.home-page {
+    background-image: url("Images/Images/homepage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* premium feel */
+    min-height: 100vh;
+}
+
+/* Optional dark overlay for readability later */
+body.home-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25); /* adjust darkness */
+    z-index: -1;
+}
