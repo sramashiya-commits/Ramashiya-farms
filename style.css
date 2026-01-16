@@ -93,24 +93,17 @@ header {
 }
 
 /* ===============================
-   BODY DEFAULT (ALL PAGES)
-   =============================== */
-
-body {
-    padding-top: 120px; /* space for fixed header */
-    min-height: 100vh;
-}
-
-/* ===============================
    HOME PAGE BACKGROUND (ONLY)
    =============================== */
 
 body.home-page {
-    background-image: url("../images/images/homepage.jpg");
+    min-height: 100vh;
+    background-image: url("Images/Images/homepage.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-top: 120px;
 }
 
 /* Remove overlays on home page */
