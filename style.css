@@ -470,7 +470,7 @@ body.home-page {
    =============================== */
 
 body.home-page {
-    background-image: url("Images/Images/homepage.jpg");
+    background-image: url("Images/logo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
