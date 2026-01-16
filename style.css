@@ -153,3 +153,30 @@ body.home-page .product-card {
         display: flex;
     }
 }
+
+/* ===============================
+   HOME PAGE — BACKGROUND ONLY
+   =============================== */
+body.home-page {
+    min-height: 100vh;
+    padding-top: 120px; /* space for fixed header */
+    background-image: url("Images/Images/homepage.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Hide all content sections on home page */
+.home-page .hero,
+.home-page .container,
+.home-page .section,
+.home-page .product-grid,
+.home-page .product-card {
+    display: none !important;
+}
+
+/* Remove overlay if you had one */
+body.home-page::before {
+    display: none !important;
+}
