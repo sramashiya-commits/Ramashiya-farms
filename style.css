@@ -517,3 +517,21 @@ body.home-page {
     background: red !important;
 }
 
+/* ===============================
+   HOME PAGE BACKGROUND — FINAL
+   =============================== */
+
+body.home-page {
+    background-image: url("../Images/Images/homepage.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh;
+}
+
+/* Disable overlay ONLY on home page */
+body.home-page::before {
+    display: none !important;
+}
+
