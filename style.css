@@ -1,39 +1,21 @@
 /* ===============================
-   BODY & HOME PAGE BACKGROUND
+   GLOBAL BODY AND BASIC LAYOUT
    =============================== */
 body {
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-}
-
-/* HOME PAGE ONLY */
-body.home-page {
-    background-image: url("Images/Images/homepage.jpg");
+    background: 
+        linear-gradient(to top, rgba(200, 230, 200, 0.6) 0%, rgba(160, 210, 160, 0.6) 50%), 
+        linear-gradient(to bottom, #e8f5e9, #ffffff);
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    min-height: 100vh;
-}
-
-/* Remove content sections on home page */
-body.home-page .hero,
-body.home-page .container,
-body.home-page .section,
-body.home-page .product-grid,
-body.home-page .product-card {
-    display: none !important;
-}
-
-/* Remove overlay on home page */
-body.home-page::before {
-    display: none !important;
 }
 
 /* ===============================
-   HEADER / NAVIGATION
+   HEADER & NAVIGATION
    =============================== */
 header {
     position: fixed;
@@ -42,87 +24,113 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: #1f4f2e;
-    padding: 10px 24px; /* reduced from previous */
+    padding: 14px 24px;
     box-sizing: border-box;
+}
+
+/* Reserve space below header */
+body {
+    padding-top: 120px;
+}
+
+/* Header container */
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
-/* LEFT: Logo */
-.header-left img {
-    height: 50px; /* smaller logo for home page */
+/* Left — logo */
+.header-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 60px;
     width: auto;
     border-radius: 8px;
     border: 3px solid white;
-    padding: 3px;
+    padding: 5px;
     background-color: white;
 }
 
-/* CENTER: Title */
+/* Center — title */
 .header-center {
-    flex: 0 1 auto;
+    flex: 0 1 35%;
     text-align: center;
     white-space: nowrap;
 }
+
 .main-title {
-    font-size: 1.8rem;
+    margin: 0;
+    font-size: 2rem;
     color: white;
     font-weight: bold;
 }
+
 .tagline {
-    font-size: 0.9rem;
+    margin-top: 4px;
+    font-size: 1rem;
     color: rgba(255,255,255,0.9);
     font-style: italic;
 }
 
-/* RIGHT: Navigation */
+/* Right — navigation */
 .header-right {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
+
 .right-nav {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     white-space: nowrap;
 }
+
 .right-nav a {
-    padding: 6px 12px;
+    padding: 8px 16px;
     color: white;
     text-decoration: none;
     border-radius: 4px;
     border: 1px solid rgba(255,255,255,0.3);
     background-color: rgba(255,255,255,0.1);
 }
+
 .right-nav a:hover {
     background-color: rgba(255,255,255,0.3);
 }
 
-/* SHRINK HEADER ON SCROLL */
+/* Shrink header on scroll */
 header.shrink {
-    padding: 6px 24px;
+    padding: 10px 24px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-/* MOBILE MENU */
+/* Mobile navigation */
 .menu-toggle {
     display: none;
 }
+
 @media (max-width: 768px) {
     .right-nav {
         display: none;
         flex-direction: column;
         position: absolute;
         right: 20px;
-        top: 60px;
+        top: 70px;
         background-color: #2e7d32;
         padding: 10px;
         border-radius: 6px;
     }
+
     .right-nav.show {
         display: flex;
     }
+
     .menu-toggle {
         display: block;
         font-size: 26px;
@@ -133,26 +141,98 @@ header.shrink {
     }
 }
 
-/* HEADER SPACING FOR HOME PAGE */
-body.home-page {
-    padding-top: 70px; /* exact height of reduced header */
+/* ===============================
+   INNER PAGE HEADER ADJUSTMENTS
+   =============================== */
+.inner-page header {
+    padding: 10px 20px;
+}
+
+.inner-page .header-logo img {
+    height: 45px;
+}
+
+.inner-page .main-title {
+    font-size: 1.6rem;
+}
+
+.inner-page .tagline {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.inner-page .right-nav a {
+    padding: 6px 14px;
+    font-size: 14px;
 }
 
 /* ===============================
-   FOOTER
+   HERO / SECTIONS / FOOTER
    =============================== */
+.hero {
+    background-color: rgba(255,255,255,0.85);
+    padding: 50px 30px;
+    margin: 0 auto 50px auto;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 900px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    color: #1b5e20;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.hero p {
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.section {
+    margin-bottom: 50px;
+    padding: 35px 30px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    border-left: 5px solid #2e7d32;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8f5e9;
+    font-weight: 700;
+}
+
+.section p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(31,79,46,0.9);
+    background-color: #1f4f2e;
     color: white;
-    font-weight: 500;
 }
 
-/* ===============================
-   WHATSAPP BUTTON
-   =============================== */
-a[href^="https://wa.me/"] {
+/* WhatsApp button */
+a[target="_blank"] {
     position: fixed;
     bottom: 20px;
     right: 20px;
