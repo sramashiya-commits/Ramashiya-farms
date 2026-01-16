@@ -470,7 +470,7 @@ body.home-page {
    =============================== */
 
 body.home-page {
-    background-image: url("images/images/homepage.jpg");
+    background-image: url("Images/Images/logo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -481,5 +481,8 @@ body.home-page {
     background-blend-mode: normal;
 }
 
+body.home-page {
+    background-image: url("Images/Images/homepage.jpg") !important;
+}
 
 
