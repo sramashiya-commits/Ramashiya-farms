@@ -494,4 +494,22 @@ body.home-page {
     background-attachment: fixed;
 }
 
+/* ===============================
+   FORCE HOME PAGE BACKGROUND
+   =============================== */
+
+html, body {
+    height: 100%;
+}
+
+body.home-page {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("Images/Images/home-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
