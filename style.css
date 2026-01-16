@@ -481,4 +481,17 @@ body.home-page {
     background-blend-mode: normal;
 }
 
+/* ===============================
+   HOME PAGE BACKGROUND OVERRIDE
+   =============================== */
+
+body.home-page {
+    background: none; /* kills gradient */
+    background-image: url("Images/Images/home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 
